@@ -1,0 +1,15 @@
+button {
+    border-radius: 4px;
+}
+
+button:not(.add-new__submit-button) {
+    margin-left: 4px;
+}
+
+li:not(:first-child) {
+    margin-top: 4px;
+}
+
+body {
+    background-color: rgb(242, 240, 236);
+}

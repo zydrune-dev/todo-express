@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Home</title>
+        <link rel="stylesheet" href="/css/style.css">
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/todo/list">Todo list</a></li>
+                <li><a href="/todo/add-new">Add new</a></li>
+            </ul>
+        </nav>
+        <h1>Todo</h1>
+        <p>
+            The starting point for a bigger todo app. A small, deliberately simple prototype that saves your todos to localStorage.
+        </p>
+        <p>This little project exists to practice:</p>
+        <ul>
+            <li>Route handling with <code>express.Router</code> and modular route files.</li>
+            <li>
+                Distinguishing <code>/</code> from "not found": when to reach for
+                <code>app.get("/")</code> vs. <code>app.use("/")</code>.
+            </li>
+            <li>Serving static JS and CSS via <code>express.static</code>.</li>
+            <li>Having fun re-remembering how to write plain, vanilla JavaScript.</li>
+        </ul>
+    </body>
+</html>
