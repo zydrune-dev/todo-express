@@ -1,18 +1,12 @@
 import express from 'express';
-import { getViewsDir } from '../utils/path.js';
+import { showAddNewPage, showTodosPage, redirectToList } from '../controllers/todoControllers.js';
 
 const router = express.Router();
 
-router.get('/', (req, res, next) => {
-    res.redirect('/todo/list');
-});
+router.get('/', redirectToList);
 
-router.get('/add-new', (req, res, next) => {
-    res.sendFile(getViewsDir('add-new.html'));
-});
+router.get('/add-new', showAddNewPage);
 
-router.get('/list', (req, res, next) => {
-    res.sendFile(getViewsDir('list.html'));
-});
+router.get('/list', showTodosPage);
 
 export default router;
