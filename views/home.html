@@ -14,17 +14,18 @@
         </nav>
         <h1>Todo</h1>
         <p>
-            The starting point for a bigger todo app. A small, deliberately simple prototype that saves your todos to localStorage.
+            A small Express learning app with a growing MVC structure. Todos are saved on the server
+            in <code>data/todos.json</code>; the list page loads them via a JSON API and keeps a
+            <code>localStorage</code> copy for snappy, optimistic UI updates.
         </p>
         <p>This little project exists to practice:</p>
         <ul>
-            <li>Route handling with <code>express.Router</code> and modular route files.</li>
-            <li>
-                Distinguishing <code>/</code> from "not found": when to reach for
-                <code>app.get("/")</code> vs. <code>app.use("/")</code>.
-            </li>
+            <li>MVC layout: routes, controllers, models, and static HTML views.</li>
+            <li>Route handling with <code>express.Router</code>, including nested API routes.</li>
+            <li>Server-side persistence with a JSON file and <code>fs/promises</code>.</li>
+            <li>Form POSTs and JSON APIs (<code>express.urlencoded</code>, <code>express.json</code>).</li>
+            <li>Client-side fetch + <code>localStorage</code> for optimistic list updates.</li>
             <li>Serving static JS and CSS via <code>express.static</code>.</li>
-            <li>Having fun re-remembering how to write plain, vanilla JavaScript.</li>
         </ul>
     </body>
 </html>
