@@ -7,12 +7,13 @@
   "type": "module",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js",
-    "dev": "nodemon app.js"
+    "start": "node --env-file=.env app.js",
+    "dev": "nodemon --env-file=.env app.js"
   },
   "dependencies": {
     "body-parser": "^2.2.2",
-    "express": "^5.2.1"
+    "express": "^5.2.1",
+    "pg-promise": "^12.6.2"
   },
   "devDependencies": {
     "nodemon": "^3.1.14"

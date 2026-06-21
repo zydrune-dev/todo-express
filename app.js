@@ -3,6 +3,7 @@ import path from 'path';
 import { rootDir } from './utils/path.js'
 import todoRoutes from './routes/todo.js'
 import { showHomePage, show404Page } from './controllers/appControllers.js';
+import { initDb } from './utils/database.js'
 
 const PORT = 3000;
 
@@ -18,7 +19,14 @@ app.get('/', showHomePage);
 app.use('/todo', todoRoutes);
 
 app.use(show404Page);
-  
-app.listen(PORT, () => {
-    console.log(`Example app listening on port ${PORT}`)
-});
+
+(async() => {
+    try {
+        await initDb();
+        app.listen(PORT, () => {
+            console.log(`Example app listening on port ${PORT}`)
+        });
+    } catch(error) {
+        console.log(error);
+    } 
+})();
