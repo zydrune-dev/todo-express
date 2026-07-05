@@ -7,9 +7,7 @@ export const AppDataSource = new DataSource({
     database: process.env.DATABASE_NAME,
     username: process.env.DATABASE_USER,
     password: process.env.DATABASE_PASSWORD,
-    entities: [
-        // Add your entity classes / EntitySchemas here.
-    ],
+    entities: [],
     synchronize: true,
     logging: true,
 });
