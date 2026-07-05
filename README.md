@@ -19,16 +19,22 @@ snappy, optimistic UI updates.
 ## Project structure
 
 ```
-app.js                  # Express entry point
-routes/
-  todo.js               # Page routes (list, add-new)
-  apiRoutes.js          # JSON API routes
-controllers/
-  appControllers.js     # Home and 404
-  todoControllers.js    # Todo page and API handlers
-models/
-  todo.js               # Read/write data/todos.json
-views/                  # Static HTML pages
+src/
+  app.ts                # Express entry point
+  data-source.ts        # TypeORM database connection
+  routes/
+    todo.js             # Page routes (list, add-new)
+    apiRoutes.js        # JSON API routes
+  controllers/
+    appControllers.js   # Home and 404
+    todoControllers.js  # Todo page and API handlers
+  models/
+    todo.js             # Read/write data/todos.json
+  entities/
+    Todo.ts             # TypeORM entity
+  enums/
+    Status.ts           # Todo status enum
+  views/                # Static HTML pages
 public/js/script.js     # List page: fetch API + optimistic UI
 data/todos.json         # Todo storage (gitignored)
 ```
@@ -45,7 +51,7 @@ data/todos.json         # Todo storage (gitignored)
 
 ```bash
 npm install
-npm run dev      # nodemon (ignores data/ to avoid restarts on todo saves)
+npm run dev      # tsx watch (ignores data/ to avoid restarts on todo saves)
 # or
 npm start        # plain node
 ```

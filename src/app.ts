@@ -1,10 +1,10 @@
 import 'reflect-metadata';
 import express from 'express';
 import path from 'path';
-import { rootDir } from './utils/path.js';
-import todoRoutes from './routes/todo.js';
-import { showHomePage, show404Page } from './controllers/appControllers.js';
-import { AppDataSource } from './utils/database.js';
+import { rootDir } from '@/utils/path.js';
+import todoRoutes from '@/routes/todo.js';
+import { showHomePage, show404Page } from '@/controllers/appControllers.js';
+import { AppDataSource } from '@/data-source.js';
 
 const PORT = 3000;
 

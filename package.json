@@ -5,10 +5,10 @@
   "license": "ISC",
   "author": "@zydrunemac",
   "type": "module",
-  "main": "app.ts",
+  "main": "src/app.ts",
   "scripts": {
-    "start": "tsx --env-file=.env app.ts",
-    "dev": "tsx watch --ignore=./data/** --env-file=.env app.ts",
+    "start": "tsx --env-file=.env src/app.ts",
+    "dev": "tsx watch --ignore=./data/** --env-file=.env src/app.ts",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
